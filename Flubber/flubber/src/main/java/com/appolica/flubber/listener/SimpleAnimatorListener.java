@@ -2,12 +2,8 @@ package com.appolica.flubber.listener;
 
 import android.animation.Animator;
 
-import org.jetbrains.annotations.Contract;
-
-
 public class SimpleAnimatorListener implements Animator.AnimatorListener {
 
-    @Contract("_ -> !null")
     public static Animator.AnimatorListener forStart(final OnAnimationStartListener startListener) {
         return new SimpleAnimatorListener() {
             @Override
@@ -17,7 +13,6 @@ public class SimpleAnimatorListener implements Animator.AnimatorListener {
         };
     }
 
-    @Contract("_ -> !null")
     public static Animator.AnimatorListener forEnd(final OnAnimationEndListener endListener) {
         return new SimpleAnimatorListener() {
             @Override
@@ -27,7 +22,6 @@ public class SimpleAnimatorListener implements Animator.AnimatorListener {
         };
     }
 
-    @Contract("_ -> !null")
     public static Animator.AnimatorListener forCancel(final OnAnimationCancelListener cancelListener) {
         return new SimpleAnimatorListener() {
             @Override
@@ -37,7 +31,6 @@ public class SimpleAnimatorListener implements Animator.AnimatorListener {
         };
     }
 
-    @Contract("_ -> !null")
     public static Animator.AnimatorListener forRepeat(final OnAnimationRepeatListener repeatListener) {
         return new SimpleAnimatorListener() {
             @Override

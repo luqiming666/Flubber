@@ -77,9 +77,6 @@ import com.appolica.flubber.interpolator.providers.bezier.EaseOutQuart;
 import com.appolica.flubber.interpolator.providers.bezier.EaseOutQuint;
 import com.appolica.flubber.interpolator.providers.bezier.EaseOutSine;
 import com.appolica.flubber.interpolator.providers.bezier.Linear;
-
-import org.jetbrains.annotations.Contract;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -88,7 +85,6 @@ public class Flubber {
     public static final String SCALE = "scale";
     private static final String TAG = "Flubber";
 
-    @Contract(" -> !null")
     public static AnimationBody.Builder with() {
         return AnimationBody.Builder.getBuilder();
     }

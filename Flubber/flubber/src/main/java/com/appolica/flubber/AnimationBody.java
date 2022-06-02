@@ -3,11 +3,7 @@ package com.appolica.flubber;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.view.View;
-
 import com.appolica.flubber.annotations.RepeatMode;
-
-import org.jetbrains.annotations.Contract;
-
 import java.io.Serializable;
 
 public class AnimationBody implements Serializable {
@@ -258,7 +254,6 @@ public class AnimationBody implements Serializable {
 
         }
 
-        @Contract(" -> !null")
         public static Builder getBuilder() {
             return new Builder();
         }
