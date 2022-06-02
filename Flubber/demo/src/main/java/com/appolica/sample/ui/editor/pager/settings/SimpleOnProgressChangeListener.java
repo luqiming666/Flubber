@@ -1,11 +1,9 @@
 package com.appolica.sample.ui.editor.pager.settings;
 
 import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;
-import org.jetbrains.annotations.Contract;
 
 public class SimpleOnProgressChangeListener implements DiscreteSeekBar.OnProgressChangeListener {
 
-    @Contract("_ -> !null")
     public static DiscreteSeekBar.OnProgressChangeListener forProgressChanged(OnProgressChangedListener listener) {
         return new SimpleOnProgressChangeListener() {
             @Override
@@ -15,7 +13,6 @@ public class SimpleOnProgressChangeListener implements DiscreteSeekBar.OnProgres
         };
     }
 
-    @Contract("_ -> !null")
     public static DiscreteSeekBar.OnProgressChangeListener forStartTrackingTouch(OnStartTrackingTouchListener listener) {
         return new SimpleOnProgressChangeListener() {
             @Override
@@ -25,7 +22,6 @@ public class SimpleOnProgressChangeListener implements DiscreteSeekBar.OnProgres
         };
     }
 
-    @Contract("_ -> !null")
     public static DiscreteSeekBar.OnProgressChangeListener forStopTrackingTouch(OnStopTrackingTouchListener listener) {
         return new SimpleOnProgressChangeListener() {
             @Override
