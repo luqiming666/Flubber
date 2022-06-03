@@ -18,6 +18,15 @@ android {
         }
     }
 
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (variant.buildType.name == "release") {
+                outputFileName = "FlubberDemo_${defaultConfig.versionCode}_V${defaultConfig.versionName}.apk"
+                System.out.println("The output file: " + outputFileName)
+            }
+        }
+    }
+
     buildFeatures {
         dataBinding true
     }
