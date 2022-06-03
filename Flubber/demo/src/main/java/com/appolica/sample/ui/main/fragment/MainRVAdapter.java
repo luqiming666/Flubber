@@ -132,7 +132,7 @@ public class MainRVAdapter
         @Override
         public void bindTo(CustomAnimationBody animationBody) {
             binding.getModel().setAnimationBody(animationBody);
-            binding.executePendingBindings();
+            binding.invalidateAll();
         }
 
         public ListItemAnimationsBinding getBinding() {
